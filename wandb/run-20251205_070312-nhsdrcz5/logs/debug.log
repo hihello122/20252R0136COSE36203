@@ -16,3 +16,29 @@ config: {'batch_size': 32, 'learning_rate': 0.0003, 'epochs': 150, 'num_embeddin
 2025-12-05 07:03:13,335 INFO    MainThread:11012 [wandb_run.py:_redirect():2423] Wrapping output streams.
 2025-12-05 07:03:13,335 INFO    MainThread:11012 [wandb_run.py:_redirect():2446] Redirects installed.
 2025-12-05 07:03:13,337 INFO    MainThread:11012 [wandb_init.py:init():1073] run started, returning control to user process
+2025-12-05 12:52:20,596 ERROR   wandb-AsyncioManager-main:11012 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/home/ec2-user/anaconda3/envs/pytorch_p310/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/home/ec2-user/anaconda3/envs/pytorch_p310/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/home/ec2-user/anaconda3/envs/pytorch_p310/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/home/ec2-user/anaconda3/envs/pytorch_p310/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/home/ec2-user/anaconda3/envs/pytorch_p310/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-05 12:52:20,598 ERROR   wandb-AsyncioManager-main:11012 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/home/ec2-user/anaconda3/envs/pytorch_p310/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/home/ec2-user/anaconda3/envs/pytorch_p310/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/home/ec2-user/anaconda3/envs/pytorch_p310/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/home/ec2-user/anaconda3/envs/pytorch_p310/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/home/ec2-user/anaconda3/envs/pytorch_p310/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost

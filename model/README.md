@@ -1,9 +1,9 @@
 ---
-base_model: TinyLlama/TinyLlama-1.1B-Chat-v1.0
+base_model: meta-llama/Meta-Llama-3-8B-Instruct
 library_name: peft
 pipeline_tag: text-generation
 tags:
-- base_model:adapter:TinyLlama/TinyLlama-1.1B-Chat-v1.0
+- base_model:adapter:meta-llama/Meta-Llama-3-8B-Instruct
 - lora
 - transformers
 ---
