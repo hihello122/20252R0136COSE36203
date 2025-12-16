@@ -1,0 +1,49 @@
+2025-12-10 01:07:26,953 INFO    MainThread:11770 [wandb_init.py:setup_run_log_directory():706] Logging user logs to /home/ec2-user/SageMaker/wandb/offline-run-20251210_010726-ow2w6nsr/logs/debug.log
+2025-12-10 01:07:26,953 INFO    MainThread:11770 [wandb_init.py:setup_run_log_directory():707] Logging internal logs to /home/ec2-user/SageMaker/wandb/offline-run-20251210_010726-ow2w6nsr/logs/debug-internal.log
+2025-12-10 01:07:26,953 INFO    MainThread:11770 [wandb_init.py:monkeypatch_ipython():625] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x7fbf98545a80>
+2025-12-10 01:07:26,953 INFO    MainThread:11770 [wandb_init.py:init():833] calling init triggers
+2025-12-10 01:07:26,953 INFO    MainThread:11770 [wandb_init.py:init():838] wandb.init called with sweep_config: {}
+config: {'batch_size': 32, 'learning_rate': 0.0003, 'epochs': 200, 'num_embeddings': 16, 'commitment_cost': 0.25, '_wandb': {}}
+2025-12-10 01:07:26,964 INFO    MainThread:11770 [wandb_init.py:init():881] starting backend
+2025-12-10 01:07:26,964 INFO    MainThread:11770 [wandb_init.py:init():884] sending inform_init request
+2025-12-10 01:07:26,965 INFO    MainThread:11770 [wandb_init.py:init():892] backend started and connected
+2025-12-10 01:07:26,970 INFO    MainThread:11770 [wandb_run.py:_label_probe_notebook():1328] probe notebook
+2025-12-10 01:07:26,971 INFO    MainThread:11770 [wandb_run.py:_label_probe_notebook():1338] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2025-12-10 01:07:26,971 INFO    MainThread:11770 [wandb_init.py:init():962] updated telemetry
+2025-12-10 01:07:26,976 INFO    MainThread:11770 [wandb_init.py:init():986] communicating run to backend with 90.0 second timeout
+2025-12-10 01:07:27,098 INFO    MainThread:11770 [wandb_init.py:init():1033] starting run threads in backend
+2025-12-10 01:07:27,274 INFO    MainThread:11770 [wandb_run.py:_console_start():2506] atexit reg
+2025-12-10 01:07:27,274 INFO    MainThread:11770 [wandb_run.py:_redirect():2354] redirect: wrap_raw
+2025-12-10 01:07:27,274 INFO    MainThread:11770 [wandb_run.py:_redirect():2423] Wrapping output streams.
+2025-12-10 01:07:27,274 INFO    MainThread:11770 [wandb_run.py:_redirect():2446] Redirects installed.
+2025-12-10 01:07:27,274 INFO    MainThread:11770 [wandb_init.py:init():1073] run started, returning control to user process
+2025-12-10 01:07:27,391 INFO    MainThread:11770 [wandb_init.py:_post_run_cell_hook():595] [no run ID] resuming backend
+2025-12-10 01:08:08,430 INFO    MainThread:11770 [jupyter.py:save_ipynb():353] [no run ID] not saving jupyter notebook
+2025-12-10 01:08:08,430 INFO    MainThread:11770 [wandb_init.py:_pre_run_cell_hook():584] [no run ID] pausing backend
+2025-12-10 01:08:12,020 INFO    MainThread:11770 [wandb_init.py:_post_run_cell_hook():595] [no run ID] resuming backend
+2025-12-10 01:08:54,950 ERROR   wandb-AsyncioManager-main:11770 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/home/ec2-user/anaconda3/envs/pytorch_p310/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/home/ec2-user/anaconda3/envs/pytorch_p310/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/home/ec2-user/anaconda3/envs/pytorch_p310/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/home/ec2-user/anaconda3/envs/pytorch_p310/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/home/ec2-user/anaconda3/envs/pytorch_p310/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-12-10 01:08:54,951 ERROR   wandb-AsyncioManager-main:11770 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/home/ec2-user/anaconda3/envs/pytorch_p310/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/home/ec2-user/anaconda3/envs/pytorch_p310/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/home/ec2-user/anaconda3/envs/pytorch_p310/lib/python3.10/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/home/ec2-user/anaconda3/envs/pytorch_p310/lib/python3.10/asyncio/streams.py", line 371, in drain
+    await self._protocol._drain_helper()
+  File "/home/ec2-user/anaconda3/envs/pytorch_p310/lib/python3.10/asyncio/streams.py", line 167, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
